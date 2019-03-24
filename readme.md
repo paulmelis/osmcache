@@ -12,7 +12,7 @@ PM 2019-03-13
 
 $ ./serve.py
 
-Serves tiles on port 12347 under URL /tile/<zoom>/<x>/<y>
+Serves tiles on port 12347 under URL `/tile/<zoom>/<x>/<y>`
 (see https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames)
 
 ## Dependencies
