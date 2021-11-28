@@ -6,6 +6,9 @@ Simple tile caching server for OpenStreetMap tiles.
 - Serves tiles from cache, if available
 - Respects the OSM [Tile Usage Policy](https://operations.osmfoundation.org/policies/tiles/)
 
+A local cache can be faster in providing often-used tiles, especially
+when doing development cycles that retrieve such tiles.
+
 ## Usage
 
 ```python
