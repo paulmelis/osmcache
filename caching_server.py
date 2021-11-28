@@ -36,6 +36,7 @@ class TileFetchThread(threading.Thread):
             url = '%s/%d/%d/%d.png' % (get_osm_tile_server(), zoom, x, y)
                 
             # Make request to OSM
+            #print('Fetching %s' % url)
             r = requests.get(url)
             
             if r.status_code == 200:
@@ -125,6 +126,7 @@ class Manager(threading.Thread):
             self.job_queue.put(None)
 
 manager = Manager()
+manager.daemon = True
 manager.start()
 
 app = Flask(__name__)
@@ -146,4 +148,3 @@ def tile(zoom, x, y):
         return send_file(tile_file, mimetype='image/png', as_attachment=False)
     else:
         return 'Doh!', status_code
-    
