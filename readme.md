@@ -12,7 +12,7 @@ Simple tile caching server for OpenStreetMap tiles.
 $ ./serve.py
 ```
 
-Serves tiles on port 12347 under URL `/tile/<zoom>/<x>/<y>`
+Serves tiles on port 8888 under URL `/tile/<zoom>/<x>/<y>`
 (see https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames)
 
 ## Dependencies
