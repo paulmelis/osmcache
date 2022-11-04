@@ -7,15 +7,15 @@ Simple tile caching server for OpenStreetMap tiles.
 - Respects the OSM [Tile Usage Policy](https://operations.osmfoundation.org/policies/tiles/)
 
 A local cache can be faster in providing often-used tiles, especially
-when doing development cycles that retrieve such tiles.
+when doing development cycles that retrieve the same tiles repeatedly.
 
 ## Usage
 
 ```python
-$ ./serve.py
+$ ./serve.py [port]
 ```
 
-Serves tiles on port 8888 under URL `/tile/<zoom>/<x>/<y>`
+Serves tiles (by default on port 8888) under URL `/tile/<zoom>/<x>/<y>`
 (see https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames)
 
 ## Dependencies

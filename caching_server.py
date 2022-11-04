@@ -37,10 +37,12 @@ class TileFetchThread(threading.Thread):
                 
             # Make request to OSM
             #print('Fetching %s' % url)
-            r = requests.get(url)
+            headers = {"User-Agent" :"osmcache 1.0"}
+            r = requests.get(url, headers=headers)
             
             if r.status_code == 200:
                 # Save to disk
+                # XXX could use the expiry header value for better caching
                 with open(tilefile, 'wb') as f:
                     f.write(r.content)
         
