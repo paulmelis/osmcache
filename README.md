@@ -15,8 +15,9 @@ when doing development cycles that retrieve the same tiles repeatedly.
 $ ./serve.py [port]
 ```
 
-Serves tiles (by default on port 8888) under URL `/tile/<zoom>/<x>/<y>`
-(see https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames)
+Serves tiles (by default on port 8888) under URL `/tile/<zoom>/<x>/<y>`.
+See https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames for meaning
+of `zoom`, `x` and `y` parameters.
 
 ## Dependencies
 
